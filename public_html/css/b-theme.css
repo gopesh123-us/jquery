@@ -1,0 +1,39 @@
+div {
+    background-color: pink;
+    padding: 15px;
+}
+p,
+h1,
+h2,
+h3,
+h4 {
+    color: rgb(78, 74, 74);
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+}
+fieldset {
+    text-align: center;
+    background: transparent;
+    border: 1px solid black;
+}
+
+fieldset a {
+    margin: 2px;
+    background: black;
+    color: white;
+    padding: 3px;
+}
+
+legend {
+    font-size: 20px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #parent {
+            position: relative;
+        }
+
+        #child-image {
+            position: absolute;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>JQuery Udemy Tutorials</title>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //add code here
+            $(document).mousemove(function (e) {
+                $("#coordinates").html("X position: " + e.pageX + " " + "Y position: " + e.pageY);
+                $("#child-image").css({
+                    top: (e.pageY),
+                    left: (e.pageX)
+                });
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="coordinates">Results goes here</div>
+        <img id="child-image" src="../../mickey.png" alt="">
+    </div>
+
+</body>
+
+</html>

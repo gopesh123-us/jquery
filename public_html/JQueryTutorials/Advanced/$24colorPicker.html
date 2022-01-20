@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #display {
+            height: 400px;
+            width: 400px;
+            background-color: yellowgreen;
+            margin: 10px auto;
+            color: white;
+            padding: 5px;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>JQuery Udemy Tutorials</title>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //add code here
+            //add image to canvas. Get canvas and add an image
+            var canvas = $("#myCanvas").get(0);
+            var context = canvas.getContext("2d");
+            var image = new Image();
+            image.src = "flower-unsplash.jpg";
+            $(image).on('load', function () {
+                context.drawImage(image, 0, 0);
+            });
+            $(canvas).click(function (e) {
+                //get offset of the canvas
+                var canvasGap = $(canvas).offset();
+                var xPosition = Math.floor(e.pageX - canvasGap.left);
+                var yPosition = Math.floor(e.pageY - canvasGap.top);
+                var pixelData = context.getImageData(xPosition, yPosition, 1, 1);
+                var data = pixelData.data;
+                var pixelColor = "rgba(" + data[0] + "," + data[1] + "," + data[2] + "," + data[3] +
+                    ")";
+                $("#display").css("background-color", pixelColor);
+                $("#display").html("background-color " + pixelColor);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <!--This is HTML5 Canvas. Add a canvas-->
+    <div class="container">
+        <canvas id="myCanvas">
+            Your browser does not support HTML5 Canvas
+        </canvas>
+        <div id="display">
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

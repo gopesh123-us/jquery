@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>JQuery Udemy Tutorials</title>
+    <style>
+        p {
+            font-size: 30px;
+            width: 400px;
+            height: 450px;
+            margin: 0px auto;
+            text-align: justify;
+        }
+
+        p span {
+            text-decoration: underline;
+        }
+
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //add code here
+            var words = $("p");
+            words.each(function () {
+                var wordArray = $(this).text().split(" ");
+                $(this).empty();
+                for (var i = 0; i < wordArray.length; i++) {
+                    $(this).append(" <span>" + wordArray[i]) + "</span>";
+                }
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <!--add html-code here-->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis voluptates provident aliquam velit molestias
+            odit facere explicabo impedit quae obcaecati.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quibusdam, fugiat facilis soluta sit rem
+            totam odit temporibus ipsam modi iste unde eos. Illum alias officia quas, consectetur fugit id ipsam nulla
+            ex placeat enim earum, molestiae et aspernatur aliquam aut. Accusamus enim dolorum quam at voluptatem
+            sapiente voluptates repellat?</p>
+    </div>
+
+
+</body>
+
+</html>

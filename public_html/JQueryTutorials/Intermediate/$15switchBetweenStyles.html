@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link class="main-link" rel="stylesheet" href="../../css/default.css">
+    <title>JQuery Udemy Tutorials</title>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //add code here
+            $(".a-link").click(function (e) {
+                $(".main-link").attr("href", $(this).attr("rel"));
+                //e.preventDefault();
+                return false;
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <fieldset>
+                <legend>Style Switcher</legend>
+                <ul>
+                    <li><a class="a-link" href="" rel="../../css/default.css">Default Theme</a></li>
+                    <li><a class="a-link" href="" rel="../../css/a-theme.css">Theme A</a></li>
+                    <li><a class="a-link" href="" rel="../../css/b-theme.css">Theme B</a></li>
+                </ul>
+            </fieldset>
+        </div>
+        <div id="main" class="row">
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam nesciunt porro ipsa eaque distinctio
+                natus.
+                Voluptate ab ad est excepturi, neque, harum laboriosam sunt voluptatibus, iure distinctio impedit
+                repellat
+                accusamus adipisci? Harum facilis ad eius odio aliquam quisquam minus labore porro nemo optio, nam
+                necessitatibus numquam, consequatur reiciendis. Itaque.</p>
+            <h2>First Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, vitae at provident earum nemo, consequatur
+                eos
+                eveniet, vero accusantium alias vel! Earum deserunt non beatae, delectus obcaecati tempore optio, natus
+                cupiditate ab dignissimos perferendis quos.</p>
+            <h3>Second Heading</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, assumenda. Amet, dicta earum asperiores,
+                aliquid praesentium, non quos dolorum delectus dolorem a iste adipisci porro nihil molestias iusto culpa
+                veritatis dolore voluptate. Commodi eum, amet asperiores quis, repellendus autem ullam nesciunt eligendi
+                ipsum nulla vel cumque aperiam velit quas? Iure!</p>
+            <h4>Sub Heading</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta officia minima provident magnam eaque sunt
+                eos
+                animi nesciunt aperiam cupiditate, a quae soluta quidem explicabo odit veritatis et temporibus labore ea
+                modi fugiat fuga possimus blanditiis perferendis. Eaque quam, doloremque error aperiam necessitatibus
+                quas
+                architecto nemo earum, excepturi, aspernatur animi?</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

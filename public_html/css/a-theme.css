@@ -1,0 +1,41 @@
+div#main {
+    background-color: lightskyblue;
+    color: white;
+    overflow: auto;
+    text-align: justify;
+    margin: auto 30px;
+    padding: 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+h1 {
+    text-align: center;
+    color: white;
+}
+
+fieldset {
+    text-align: center;
+    background: transparent;
+    border: 1px solid black;
+}
+
+fieldset a {
+    margin: 2px;
+    background: black;
+    color: white;
+    padding: 3px;
+}
+
+legend {
+    font-size: 20px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}

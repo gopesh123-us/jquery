@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>JQuery Udemy Tutorials</title>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //add code here
+            $(".btn").click(function () {
+                var action = $(this).text();
+                var para = $("p");
+                if (action == 'Bold') {
+                    para.css("font-weight", "bold");
+                } else if (action == 'Italic') {
+                    para.css("font-style", "italic");
+                } else {
+                    para.css("text-decoration", "underline");
+                }
+                $(this).prop("disabled", true);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, officia hic nobis recusandae, eos
+                perspiciatis doloremque, adipisci ducimus rem necessitatibus possimus similique eveniet iusto
+                reprehenderit sapiente beatae optio commodi temporibus!
+            </p>
+            <button class="btn">Bold</button>
+            <button class="btn">Italic</button>
+            <button class="btn">Underline</button>
+        </div>
+
+    </div>
+    </div>
+
+</body>
+
+</html>

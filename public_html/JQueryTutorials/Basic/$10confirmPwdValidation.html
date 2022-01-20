@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>JQuery Udemy Tutorials</title>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //add code here
+            $("#loginForm").submit(function () {
+                var password = $("#pwd").val();
+                var confPassword = $("#confPwd").val();
+                if (password != confPassword) {
+                    //empty the message in the span
+                    $("#error").text("Passwords do not match!");
+                    $("#error").text(
+                        "Please re-enter same password in both fields"
+                    ); //sets the text displayed in between the tags
+                    console.log($("#error").text()); //get text in-between the tags
+                    return false;
+                } else {
+                    $("#error").text(""); //clear the message
+                    return true;
+                }
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <!--add html-code here-->
+        <form action="http://127.0.0.1:5500/JQueryTutorials/Basic/$10pwdConfirmation.html" method="post" id="loginForm">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="password" class="validate" id="pwd" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="input-field col s12">
+                    <input type="password" class="validate" id="confPwd" required>
+                    <label for="password">Confirm Password</label>
+                    <span style="color:red;" id="error"></span>
+                </div>
+                <div class="input-field col s12">
+                    <button class="btn">Submit</button>
+                </div>
+        </form>
+    </div>
+    </div>
+
+</body>
+
+</html>

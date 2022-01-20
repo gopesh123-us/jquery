@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        #box {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            background: purple;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>JQuery Udemy Tutorials</title>
+    <script type="text/javascript">
+        /**
+         * The box is hidden. So, we have first add on click of a button
+         * if the box is hidden, then change it's hidden property to false
+         * Then we have to add an animation to the box.
+         * for 5seconds (5000 milli), and in the end change its background color to pink
+         * Caching -- how many times we are accessing the dom, as many times we are writing $("#box")
+         * so declare a variable var = #box
+         * */
+        /*  $(document).ready(function () {
+             $("button").click(function () {
+                 if ($("#box").is(":hidden")) {
+                     $("#box").prop("hidden", false);
+                     $("#box").animate({
+                         "height": "100px",
+                         "width": "100px"
+                     }, 5000, function () {
+                         $("#box").css("background", "pink");
+                     });
+                 }
+             });
+         }); */
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                var $box = $("#box");
+                if ($box.is(":hidden")) {
+                    $box.prop("hidden", false);
+                    $box.animate({
+                        "height": "100px",
+                        "width": "100px"
+                    }, 5000, function () {
+                        $box.css("background", "pink");
+                    });
+                }
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="box" hidden></div>
+        <button>Click me</button>
+    </div>
+
+</body>
+
+</html>

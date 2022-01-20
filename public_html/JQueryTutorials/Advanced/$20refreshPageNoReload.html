@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        img {
+            height: 250px;
+            width: 250;
+            margin-top: 10px;
+        }
+
+        .content {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>JQuery Udemy Tutorials</title>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //add code here
+            //var i = 10;
+            var quoteArray = [];
+            quoteArray[0] = "The best prepration for tomorrow is doing your best today";
+            quoteArray[1] = "Try to be a rainbow in someone's cloud";
+            quoteArray[2] = "A goal without a plan is just a wish";
+            quoteArray[3] = "We become what we think about";
+            quoteArray[4] = "What hurts you today will make you stronger tomorrow";
+
+            showContent();
+
+            function showContent() {
+
+                var random = Math.floor(Math.random() * quoteArray.length);
+                console.log(random);
+                $(".content").html(quoteArray[random]);
+                setTimeout(showContent, 2000);
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <!--add html-code here-->
+        <div class="content"></div>
+        <img src="../../tile.png" alt="">
+    </div>
+
+
+</body>
+
+</html>

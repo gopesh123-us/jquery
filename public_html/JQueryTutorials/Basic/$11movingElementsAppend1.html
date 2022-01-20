@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>JQuery Udemy Tutorials</title>
+    <style>
+        .parent {
+            height: 400px;
+            width: 400px;
+            border: 1px solid black;
+            margin: 10px;
+            float: left;
+        }
+
+        .parent1 {
+            background: lightgreen;
+        }
+
+        .parent2 {
+            background: lightblue;
+        }
+
+        .child {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            margin: 5px;
+            float: left;
+            background-color: red;
+        }
+
+        #child1 {
+            background-color: darkblue;
+        }
+
+        #child2 {
+            background-color: green;
+        }
+
+        #child3 {
+            background-color: orange;
+        }
+
+        .btn {
+            margin: 10px;
+            float: left;
+        }
+
+        #child4 {
+            background-color: red;
+        }
+
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //add code here
+            $(".btn").click(function () {
+                if ($("#child4").length == 0) {
+                    $(".parent2").append($("<div class='child' id='child4'></div>"));
+                }
+                $(".parent2").append($("#child2"));
+                // $(".parent2").append($("#child1"));
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <!--add html-code here-->
+        <div class="parent parent1">
+            <div class="child" id="child1"></div>
+            <div class="child" id="child2"></div>
+        </div>
+        <div class="parent parent2">
+            <div class="child" id="child3"></div>
+
+        </div>
+        <div class="button-holder">
+            <button class="btn">click!</button>
+        </div>
+    </div>
+</body>
+
+</html>
